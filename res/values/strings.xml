@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
- <string name="app_name">WebView</string>
+ <string name="app_name">Mais Saude Móvel</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">URL:</string>
     <string name="scan">SCAN</string>  

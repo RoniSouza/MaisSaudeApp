@@ -23,7 +23,8 @@
 	    		 android:label="@string/app_name" 
 	    		 android:allowBackup="true">
 		
-		<activity android:name=".PacienteScanActivity" 
+		<activity 
+		    android:name=".PacienteScanActivity" 
 		    android:label="@string/app_name"
 			android:configChanges="orientation|keyboardHidden">
 			<intent-filter>

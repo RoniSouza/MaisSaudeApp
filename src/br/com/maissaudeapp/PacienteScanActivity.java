@@ -17,7 +17,7 @@ public class PacienteScanActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.scan);
+        setContentView(R.layout.main);
 
         txtScanResult = (TextView) findViewById(R.id.scan_result);
         View btnScan = findViewById(R.id.scan_button);
