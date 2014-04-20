@@ -19,21 +19,16 @@ public class MainActivity extends Activity {
       //field = (EditText)findViewById(R.id.urlField);
       browser = (WebView)findViewById(R.id.webView1);
       browser.setWebViewClient(new MyBrowser());
-   }
-
-
-   public void open(View view){
-      //String url = field.getText().toString();
       browser.getSettings().setLoadsImagesAutomatically(true);
       browser.getSettings().setJavaScriptEnabled(true);
       browser.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-      browser.loadUrl("http://aspspider.info/maissaude/Contas/Login");
-
+      browser.loadUrl("http://m.globo.com/");
    }
+
    private class MyBrowser extends WebViewClient {
       @Override
       public boolean shouldOverrideUrlLoading(WebView view, String url) {
-         view.loadUrl(url);
+         view.loadUrl("http://m.globo.com/");
          return true;
       }
    }
