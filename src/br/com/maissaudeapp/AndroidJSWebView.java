@@ -18,7 +18,7 @@ public class AndroidJSWebView extends Activity {
         setContentView(R.layout.activity_main);
         //WebView 
         WebView browser;
-        browser=(WebView)findViewById(R.id.webkit);
+        browser = (WebView)findViewById(R.id.webkit);
         //Habilita Javascript
         browser.getSettings().setJavaScriptEnabled(true);
         //Interface nome 'Android' 

@@ -8,17 +8,22 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.TextView;	
 
 public class PacienteScanActivity extends Activity {
     private Handler  handler = new Handler();
     private TextView txtScanResult;
-
+    private WebView webviewPaciente;
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
+        
+        webviewPaciente = (WebView)findViewById(R.id.webView1);
+        webviewPaciente.setWebViewClient(new MyBrowser());
         txtScanResult = (TextView) findViewById(R.id.scan_result);
         View btnScan = findViewById(R.id.scan_button);
         
@@ -34,6 +39,14 @@ public class PacienteScanActivity extends Activity {
             }
         });
     }
+    
+    private class MyBrowser extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+           view.loadUrl(url);
+           return true;
+        }
+     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
