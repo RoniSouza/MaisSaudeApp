@@ -21,7 +21,7 @@ public class PacienteScanActivity extends Activity {
 
         txtScanResult = (TextView) findViewById(R.id.scan_result);
         View btnScan = findViewById(R.id.scan_button);
-
+        
         // Scan button
         btnScan.setOnClickListener(new OnClickListener() {
             @Override
@@ -45,6 +45,7 @@ public class PacienteScanActivity extends Activity {
                 if (scanResult == null) {
                     return;
                 }
+                
                 final String result = scanResult.getContents();
                 if (result != null) {
                     handler.post(new Runnable() {

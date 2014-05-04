@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="br.com.maissaudeapp" 
 	android:versionCode="2"
@@ -23,15 +23,20 @@
 	<application android:icon="@drawable/icon" 
 	    		 android:label="@string/app_name" 
 	    		 android:allowBackup="true">
+	    		 
+	      <activity
+            android:name=".AndroidJSWebView"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 		
 		<activity 
-		    android:name=".MainActivity" 
+		    android:name=".PacienteScanActivity" 
 		    android:label="@string/app_name"
 			android:configChanges="orientation|keyboardHidden">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
 		</activity>
 		
 		<activity android:name="jim.h.common.android.zxinglib.CaptureActivity"
@@ -40,6 +45,4 @@
 			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 			android:windowSoftInputMode="stateAlwaysHidden" />
 	</application>
-
-	
 </manifest>
