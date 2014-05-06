@@ -27,6 +27,7 @@ public class PacienteScanActivity extends Activity {
         txtScanResult = (TextView) findViewById(R.id.scan_result);
         View btnScan = findViewById(R.id.scan_button);
         
+ 
         // Scan button
         btnScan.setOnClickListener(new OnClickListener() {
             @Override
@@ -39,6 +40,15 @@ public class PacienteScanActivity extends Activity {
             }
         });
     }
+    
+    public void open(View view){
+        String url = "http://aspspider.info/maissaude/Mobile/VisualizarPrescricaoMedica?id="+txtScanResult.getText().toString();
+        webviewPaciente.getSettings().setLoadsImagesAutomatically(true);
+        webviewPaciente.getSettings().setJavaScriptEnabled(true);
+        webviewPaciente.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webviewPaciente.loadUrl(url);
+
+     }
     
     private class MyBrowser extends WebViewClient {
         @Override

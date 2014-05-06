@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button android:id="@+id/scan_button" 
-	    android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:text="@string/scan" />
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="@string/scan" />
 	
 	<TextView android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
@@ -17,12 +18,18 @@
 	<TextView android:id="@+id/scan_result" android:layout_width="fill_parent"
 		android:layout_height="wrap_content" />
 	
+	<Button
+      android:id="@+id/button1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:onClick="open"
+      android:text="@string/browse" />
+	
 	<WebView
       android:id="@+id/webView1"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
      
      />
-	
 </LinearLayout>
    
