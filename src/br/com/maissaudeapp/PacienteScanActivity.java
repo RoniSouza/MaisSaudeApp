@@ -2,6 +2,7 @@ package br.com.maissaudeapp;
 
 import jim.h.common.android.zxinglib.integrator.IntentIntegrator;
 import jim.h.common.android.zxinglib.integrator.IntentResult;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,21 +29,25 @@ public class PacienteScanActivity extends Activity {
         View btnScan = findViewById(R.id.scan_button);
         
  
-        // Scan button
+        // Ação de escanear QRCode
         btnScan.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                // set the last parameter to true to open front light if available
+                // Ultimo parametro true para ligar flash da câmera
                 IntentIntegrator.initiateScan(PacienteScanActivity.this, 
                 		R.layout.scan,
                         R.id.viewfinder_view, 
                         R.id.preview_view, true);
+               
             }
         });
     }
     
-    public void open(View view){
-        String url = "http://aspspider.info/maissaude/Mobile/VisualizarPrescricaoMedica?id="+txtScanResult.getText().toString();
+    // Abrir WebView Prescrição
+    @SuppressLint("SetJavaScriptEnabled")
+	public void open(View view){
+        String url = "http://aspspider.info/maissaude/Mobile/VisualizarPrescricaoMedica?id="
+        			+ txtScanResult.getText().toString();
         webviewPaciente.getSettings().setLoadsImagesAutomatically(true);
         webviewPaciente.getSettings().setJavaScriptEnabled(true);
         webviewPaciente.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
@@ -76,6 +81,7 @@ public class PacienteScanActivity extends Activity {
                         public void run() {
                             txtScanResult.setText(result);
                         }
+                        
                     });
                 }
                 break;

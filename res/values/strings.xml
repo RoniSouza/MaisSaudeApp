@@ -6,7 +6,7 @@
     <string name="scan">ESCANEAR</string>  
     <string name="prescricao">Prescricao</string>    
 	<string name="aviso">Posicione o código de barras no local indicado</string>
-	<string name="scan_resut_lable">Link:</string>
+	<string name="scan_resut_lable">Registro paciente:</string>
 	<string name="msg_default_status">posicione o tablet no QRCode </string>
-	<string name="browse">Browse</string>
+	<string name="browse">Ver prescrição</string>
 </resources>

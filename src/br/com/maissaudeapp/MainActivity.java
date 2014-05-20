@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
       browser.loadUrl("http://maissaude.azurewebsites.net/");
    }
    
-   //Class to be injected in Web page
+   //Classe injectada na Web page
    public class WebAppInterface {
        Context mContext;
 
@@ -79,10 +79,10 @@ public class MainActivity extends Activity {
        }
 
        /**
-        * Intent - Move to next screen
+        * Intent - Muda para página de prescrição
         */
        @JavascriptInterface
-       public void moveToNextScreen(){
+       public void moveParaTelaScanQRCode(){
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
             // Setting Dialog Title
             alertDialog.setTitle("Alerta");
