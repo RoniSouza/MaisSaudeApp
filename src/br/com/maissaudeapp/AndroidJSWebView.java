@@ -24,7 +24,7 @@ public class AndroidJSWebView extends Activity {
         //Interface nome 'Android' 
         browser.addJavascriptInterface(new WebAppInterface(this), "Android");
         //Carrega URL dentro da WebView
-        browser.loadUrl("http://maissaude.azurewebsites.net/index.html");
+        browser.loadUrl("http://aspspider.net/index.html");
     }
     
     //Classe para ser injetada na Web page
@@ -108,3 +108,5 @@ public class AndroidJSWebView extends Activity {
         }
     }
 }
+
+
