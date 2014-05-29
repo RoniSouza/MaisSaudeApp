@@ -6,7 +6,13 @@
     <string name="scan">SCAN</string>  
     <string name="prescricao">Prescricao</string>    
 	<string name="aviso">Posicione o código de barras no local indicado</string>
+<<<<<<< HEAD
+	<string name="scan_resut_lable">Registro paciente:</string>
+	<string name="msg_default_status">posicione o tablet no QRCode </string>
+	<string name="browse">Ver prescrição</string>
+=======
 	<string name="scan_resut_lable">Scan Result:</string>
 	<string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it. </string>
+>>>>>>> parent of 36f4e8d... implantando wv em psa
 	 <string name="browse">Browse</string>     
 </resources>

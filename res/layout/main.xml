@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<<<<<<< HEAD
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/scan" />
+=======
+    <Button android:id="@+id/scan_button" 
+=======
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 	
 	<Button android:id="@+id/scan_button" 
+>>>>>>> parent of 36f4e8d... implantando wv em psa
 	    android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
 		android:text="@string/scan" />
+>>>>>>> parent of e8aa68c... 05-05-2014
 	
 	<TextView android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
@@ -16,4 +33,25 @@
 	<TextView android:id="@+id/scan_result" android:layout_width="fill_parent"
 		android:layout_height="wrap_content" />
 	
+<<<<<<< HEAD
+<<<<<<< HEAD
+	<Button
+	    android:id="@+id/button1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:onClick="open"
+	    android:text="@string/browse" />
+	
+=======
+>>>>>>> parent of e8aa68c... 05-05-2014
+	<WebView
+      android:id="@+id/webView1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+     
+     />
+	
+=======
+>>>>>>> parent of 36f4e8d... implantando wv em psa
 </LinearLayout>
