@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
     <Button
         android:id="@+id/scan_button"
         android:layout_width="176dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/scan" />
+<<<<<<< HEAD
 =======
     <Button android:id="@+id/scan_button" 
 =======
@@ -24,6 +31,8 @@
 		android:layout_height="wrap_content" 
 		android:text="@string/scan" />
 >>>>>>> parent of e8aa68c... 05-05-2014
+=======
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
 	
 	<TextView android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
@@ -35,6 +44,9 @@
 	
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
 	<Button
 	    android:id="@+id/button1"
 	    android:layout_width="wrap_content"
@@ -43,15 +55,22 @@
 	    android:onClick="open"
 	    android:text="@string/browse" />
 	
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e8aa68c... 05-05-2014
+=======
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
 	<WebView
       android:id="@+id/webView1"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
      
      />
+<<<<<<< HEAD
 	
 =======
 >>>>>>> parent of 36f4e8d... implantando wv em psa
+=======
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
 </LinearLayout>
+   

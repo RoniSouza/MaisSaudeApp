@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -19,12 +20,66 @@ import android.widget.TextView;
 =======
 import android.widget.TextView;
 >>>>>>> parent of 36f4e8d... implantando wv em psa
+=======
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.TextView;	
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
 
 public class PacienteScanActivity extends Activity {
     private Handler  handler = new Handler();
     private TextView txtScanResult;
+    private WebView webviewPaciente;
+    
+    @Override
+<<<<<<< HEAD
+=======
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        webviewPaciente = (WebView)findViewById(R.id.webView1);
+        webviewPaciente.setWebViewClient(new MyBrowser());
+        txtScanResult = (TextView) findViewById(R.id.scan_result);
+        View btnScan = findViewById(R.id.scan_button);
+        
+ 
+        // Ação de escanear QRCode
+        btnScan.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ultimo parametro true para ligar flash da câmera
+                IntentIntegrator.initiateScan(PacienteScanActivity.this, 
+                		R.layout.scan,
+                        R.id.viewfinder_view, 
+                        R.id.preview_view, true);
+               
+            }
+        });
+    }
+    
+    // Abrir WebView Prescrição
+    @SuppressLint("SetJavaScriptEnabled")
+	public void open(View view){
+        String url = "http://aspspider.info/maissaude/Mobile/VisualizarPrescricaoMedica?id="
+        			+ txtScanResult.getText().toString();
+        webviewPaciente.getSettings().setLoadsImagesAutomatically(true);
+        webviewPaciente.getSettings().setJavaScriptEnabled(true);
+        webviewPaciente.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webviewPaciente.loadUrl(url);
+
+     }
+    
+    private class MyBrowser extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+           view.loadUrl(url);
+           return true;
+        }
+     }
 
     @Override
+>>>>>>> c1898ef4dc601fc24df1b06981f9ce5ab1e81354
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {

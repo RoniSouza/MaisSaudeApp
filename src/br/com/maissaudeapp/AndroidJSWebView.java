@@ -18,7 +18,7 @@ public class AndroidJSWebView extends Activity {
         setContentView(R.layout.activity_main);
         //WebView 
         WebView browser;
-        browser=(WebView)findViewById(R.id.webkit);
+        browser = (WebView)findViewById(R.id.webkit);
         //Habilita Javascript
         browser.getSettings().setJavaScriptEnabled(true);
         //Interface nome 'Android' 
@@ -79,32 +79,32 @@ public class AndroidJSWebView extends Activity {
          */
         @JavascriptInterface
         public void moveToNextScreen(){
-             AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
-             // Setting Dialog Title
-             alertDialog.setTitle("Alerta");
-             // Setting Dialog Message
-             alertDialog.setMessage("Tem certeza que sair dessa tela?");
-             
-             // Setting Positive "Yes" Button
-             alertDialog.setPositiveButton("SIM",
-                     new DialogInterface.OnClickListener() {
-                         public void onClick(DialogInterface dialog, int which) {
+//             AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
+//             // Setting Dialog Title
+//             alertDialog.setTitle("Alerta");
+//             // Setting Dialog Message
+//             alertDialog.setMessage("Tem certeza que sair dessa tela?");
+//             
+//             // Setting Positive "Yes" Button
+//             alertDialog.setPositiveButton("SIM",
+//                     new DialogInterface.OnClickListener() {
+//                         public void onClick(DialogInterface dialog, int which) {
                              //Move to Next screen
                              Intent chnIntent = new Intent(AndroidJSWebView.this, PacienteScanActivity.class);  
                              startActivity(chnIntent);  
-                         }
-                     });
-             
-             // Setting Negative "NO" Button
-             alertDialog.setNegativeButton("NÃO",
-                     new DialogInterface.OnClickListener() {
-                         public void onClick(DialogInterface dialog, int which) {
-                             // Cancel Dialog
-                             dialog.cancel();
-                         }
-                     });
-             // Showing Alert Message
-             alertDialog.show();
+//                         }
+//                     });
+//             
+//             // Setting Negative "NO" Button
+//             alertDialog.setNegativeButton("NÃO",
+//                     new DialogInterface.OnClickListener() {
+//                         public void onClick(DialogInterface dialog, int which) {
+//                             // Cancel Dialog
+//                             dialog.cancel();
+//                         }
+//                     });
+//             // Showing Alert Message
+//             alertDialog.show();
         }
     }
 }
